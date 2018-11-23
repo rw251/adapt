@@ -35,11 +35,11 @@ class AuthPage extends React.Component {
               <form className="forms_form" onSubmit={this.handleSubmit}>
                 <fieldset className="forms_fieldset">
                   <div className="forms_field">
-                    <input name="nhs_number" type="number" className="forms_field-input" required autoFocus />
+                    <input name="nhs_number" id="nhs_number" type="number" className="forms_field-input" required autoFocus />
                     <label className="input_label" htmlFor="nhs_number">NHS number</label>
                   </div>
                   <div className="forms_field">
-                    <input name="password" type="password" className="forms_field-input" required />
+                    <input name="password" id="password" type="password" className="forms_field-input" required />
                     <label className="input_label" htmlFor="password">Password</label>
                   </div>
                 </fieldset>

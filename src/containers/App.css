@@ -1,3 +1,6 @@
 .App {
+  width: 100%;
   height: 100%;
+  background: url("https://ucarecdn.com/a5a29a3e-b537-4620-8eb4-7ac6a3b225e5/marthadominguezdegouveia572635unsplash1.jpg") no-repeat center;
+  background-size: cover;
 }

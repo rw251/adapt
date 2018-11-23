@@ -17,6 +17,7 @@
   transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), -webkit-transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 .forms_field input:focus + .input_label, .forms_field input:valid + .input_label {
+  color: #291540;
   -webkit-transform: translateY(-1em) scale(0.75) perspective(100px) translateZ(-0.001px);
           transform: translateY(-1em) scale(0.75) perspective(100px) translateZ(-0.001px);
 }
@@ -38,26 +39,6 @@ input {
 input[type="submit"] {
   cursor: pointer;
 }
-input::-webkit-input-placeholder {
-  font-size: 0.85rem;
-  letter-spacing: 0.1rem;
-  color: #ccc;
-}
-input:-ms-input-placeholder {
-  font-size: 0.85rem;
-  letter-spacing: 0.1rem;
-  color: #ccc;
-}
-input::-ms-input-placeholder {
-  font-size: 0.85rem;
-  letter-spacing: 0.1rem;
-  color: #ccc;
-}
-input::placeholder {
-  font-size: 0.85rem;
-  letter-spacing: 0.1rem;
-  color: #ccc;
-}
 
 /**
  * Page background
@@ -68,8 +49,6 @@ input::placeholder {
   align-items: center;
   width: 100%;
   height: 100%;
-  background: url("https://ucarecdn.com/a5a29a3e-b537-4620-8eb4-7ac6a3b225e5/marthadominguezdegouveia572635unsplash1.jpg") no-repeat center;
-  background-size: cover;
 }
 .user_options-container {
   position: relative;
@@ -154,12 +133,12 @@ input::placeholder {
   border-bottom: 1px solid #ccc;
   padding: 6px 20px 6px 6px;
   font-size: 1rem;
-  color: gray;
+  color: rgb(70, 70, 70);
   letter-spacing: 0.1rem;
   transition: border-color 0.2s ease-in-out;
 }
 .user_options-forms .forms_field-input:focus {
-  border-color: gray;
+  border-color: rgb(70, 70, 70);
 }
 .user_options-forms .forms_buttons {
   display: flex;
@@ -170,12 +149,12 @@ input::placeholder {
 .user_options-forms .forms_buttons-forgot {
   font-family: "Montserrat", sans-serif;
   letter-spacing: 0.1rem;
-  color: #ccc;
+  color: #7449A7;
   text-decoration: underline;
   transition: color 0.2s ease-in-out;
 }
 .user_options-forms .forms_buttons-forgot:hover {
-  color: #b3b3b3;
+  color: #291540;
 }
 .user_options-forms .forms_buttons-action {
   background-color: #a33643;
