@@ -1,5 +1,4 @@
 .ListUsersPage {
-  display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -10,13 +9,66 @@
   position: relative;
   width: 80%;
   max-width: 800px;
+  background-color: rgba(255, 255, 255, 0.85);
+  margin: 0 auto;
+  padding: 40px;
 }
 
-.ListUsersPage > .wrapper > div  {
-  padding: 40px;
-  min-height: 350px;
-  color: #fff;
-  width: 100%;
-  background-color: rgba(7, 3, 12, 0.85);
-  border-radius: 5px;
+.ListUsersPage .spacer {
+  margin-top: 20px;
 }
+
+.ListUsersPage h2 {
+  margin-bottom: 40px;
+}
+
+.ListUsersPage .patientList {
+  margin-top: 25px;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+.ListUsersPage .patientList > div {
+  padding: 3px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ListUsersPage .patientList > div > span {
+  flex: 1 1 150px;
+}
+
+.ListUsersPage .patientList > div > span:last-of-type {
+  flex: 1 1 50px;
+}
+
+
+@media screen and (max-width: 760px) {
+  .ListUsersPage > .wrapper {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 572px) {
+  .ListUsersPage > .wrapper  {
+    padding: 25px 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .ListUsersPage .patientList > div {
+    display: block;
+    border: 1px solid gray;
+    background-color: #ddd;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    padding: 5px 5px 0 5px;
+  }
+
+  .ListUsersPage .patientList > div > span {
+    display: block;
+    margin-bottom: 5px;
+  }
+}
+

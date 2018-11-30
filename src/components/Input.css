@@ -1,0 +1,45 @@
+.Input {
+  position: relative;
+}
+
+.Input:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+
+.Input input:focus + label, .Input input:valid + label {
+  color: #291540;
+  -webkit-transform: translateY(-1em) scale(0.75) perspective(100px) translateZ(-0.001px);
+          transform: translateY(-1em) scale(0.75) perspective(100px) translateZ(-0.001px);
+}
+
+.Input > input {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  padding: 6px 20px 6px 6px;
+  font-size: 1rem;
+  color: rgb(70, 70, 70);
+  letter-spacing: 0.1rem;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.Input > input:focus {
+  border-color: rgb(70, 70, 70);
+}
+
+.Input > label {
+  position: absolute;
+  left: 0px;
+  top: 5px;
+  color: rgba(0, 0, 0, 0.54);
+  /* z-index: -1; */
+  -webkit-transform: perspective(100px);
+          transform: perspective(100px);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), -webkit-transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), -webkit-transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}

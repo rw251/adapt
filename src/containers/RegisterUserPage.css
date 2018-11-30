@@ -1,5 +1,4 @@
 .RegisterUserPage {
-  display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -10,13 +9,15 @@
   position: relative;
   width: 80%;
   max-width: 800px;
+  background-color: rgba(255, 255, 255, 0.85);
+  margin: 0 auto;
+  padding: 40px;
 }
 
-.RegisterUserPage > .wrapper > div  {
-  padding: 40px;
-  min-height: 350px;
-  color: #fff;
-  width: 100%;
-  background-color: rgba(7, 3, 12, 0.85);
-  border-radius: 5px;
+.RegisterUserPage .spacer {
+  margin-top: 20px;
+}
+
+.RegisterUserPage h2 {
+  margin-bottom: 40px;
 }

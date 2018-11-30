@@ -1,43 +1,10 @@
-.forms_field {
-  position: relative;
-}
-.forms_field .input_label {
-  position: absolute;
-  left: 0px;
-  top: 5px;
-  color: rgba(0, 0, 0, 0.54);
-  z-index: -1;
-  -webkit-transform: perspective(100px);
-          transform: perspective(100px);
-  -webkit-transform-origin: 0 0;
-          transform-origin: 0 0;
-  transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), -webkit-transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), -webkit-transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-.forms_field input:focus + .input_label, .forms_field input:valid + .input_label {
-  color: #291540;
-  -webkit-transform: translateY(-1em) scale(0.75) perspective(100px) translateZ(-0.001px);
-          transform: translateY(-1em) scale(0.75) perspective(100px) translateZ(-0.001px);
-}
-
-button {
+/* button {
   background-color: transparent;
   padding: 0;
   border: 0;
   outline: 0;
   cursor: pointer;
-}
-
-input {
-  background-color: transparent;
-  padding: 0;
-  border: 0;
-  outline: 0;
-}
-input[type="submit"] {
-  cursor: pointer;
-}
+} */
 
 /**
  * Page background
@@ -124,21 +91,6 @@ input[type="submit"] {
   color: #a33643;
   letter-spacing: 0.1rem;
 }
-.user_options-forms .forms_field:not(:last-of-type) {
-  margin-bottom: 20px;
-}
-.user_options-forms .forms_field-input {
-  width: 100%;
-  border-bottom: 1px solid #ccc;
-  padding: 6px 20px 6px 6px;
-  font-size: 1rem;
-  color: rgb(70, 70, 70);
-  letter-spacing: 0.1rem;
-  transition: border-color 0.2s ease-in-out;
-}
-.user_options-forms .forms_field-input:focus {
-  border-color: rgb(70, 70, 70);
-}
 .user_options-forms .forms_buttons {
   display: flex;
   justify-content: space-between;
@@ -146,6 +98,11 @@ input[type="submit"] {
   margin-top: 35px;
 }
 .user_options-forms .forms_buttons-forgot {
+  background-color: transparent;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 0.1rem;
   color: #7449A7;

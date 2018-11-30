@@ -96,6 +96,21 @@ const auth = {
   setUserInfo(value = '', isLocalStorage = false, userInfo = USER_INFO) {
     return auth.set(value, userInfo, isLocalStorage);
   },
+
+  removePatient(nhsNumber) {
+    const patients = auth.getPatients().filter(p => p.nhsNumber !== nhsNumber);
+    return auth.set(patients, 'patients', true);
+  },
+
+  addPatient(patient) {
+    const patients = auth.getPatients();
+    patients.push(patient);
+    return auth.set(patients, 'patients', true);
+  },
+
+  getPatients() {
+    return JSON.parse(localStorage.getItem('patients') || '[]');
+  },
 };
 
 export default auth;

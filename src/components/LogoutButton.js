@@ -6,7 +6,7 @@ import auth from '../utils/auth';
 class LogoutButton extends Component {
   signOut = e => {
     e.preventDefault();
-    auth.clearAppStorage();
+    auth.clearToken();
     this.redirectUser();
   }
 
