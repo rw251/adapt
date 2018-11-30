@@ -5,6 +5,10 @@ const parse = JSON.parse;
 const stringify = JSON.stringify;
 
 const auth = {
+
+  // the current user
+  user: null,
+
   /**
    * Remove an item from the used storage
    * @param  {String} key [description]
@@ -63,8 +67,20 @@ const auth = {
     return auth.get(tokenKey);
   },
 
-  getUserInfo(userInfo = USER_INFO) {
-    return auth.get(userInfo);
+  getUserInfo(nhsNumber) {
+    if(!auth.user) {
+      const patientMatches = auth.getPatients().filter(p => p.nhsNumber === nhsNumber);
+      auth.user = patientMatches.length > 0 ? patientMatches[0] : { nhsNumber };
+    }
+    return auth.user;
+  },
+
+  setValue(key, value) {
+    if(!auth.patient) {
+      auth.getPatient();
+    }
+    auth.patient[key] = value;
+    auth.savePatient();
   },
 
   /**
@@ -111,6 +127,22 @@ const auth = {
   getPatients() {
     return JSON.parse(localStorage.getItem('patients') || '[]');
   },
+
+  getPatient(nhsNumber = auth.getToken()) {
+    auth.patient = localStorage.getItem('patient-'+nhsNumber);
+    if(!auth.patient) {
+      const patientMatches = auth.getPatients().filter(p => p.nhsNumber === nhsNumber);
+      auth.patient = JSON.stringify(patientMatches.length > 0 ? patientMatches[0] : { nhsNumber });
+    }
+    auth.patient = JSON.parse(auth.patient);
+    return auth.patient;
+  },
+
+  savePatient() {
+    if(auth.patient && auth.patient.nhsNumber) {
+      localStorage.setItem('patient-'+auth.patient.nhsNumber, JSON.stringify(auth.patient));
+    }
+  }
 };
 
 export default auth;

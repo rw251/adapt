@@ -17,7 +17,7 @@ class AuthPage extends React.Component {
 
     const nhsNumber = document.getElementById('nhs_number').value;
     auth.setToken(nhsNumber);
-    auth.setUserInfo('asfd');
+    auth.getPatient(nhsNumber);
     this.redirectUser();
   };
 

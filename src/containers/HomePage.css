@@ -1,22 +1,99 @@
 .HomePage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-.HomePage .wrapper {
+  margin:0 auto;
   position: relative;
   width: 80%;
   max-width: 800px;
+  background-color: #fff;
+  padding: 40px;
+  height: 100%;
+  overflow-y: auto;
 }
 
-.HomePage .wrapper > div  {
-  padding: 40px;
-  min-height: 350px;
-  color: #fff;
-  width: 100%;
-  background-color: rgba(7, 3, 12, 0.85);
-  border-radius: 5px;
+.HomePage h1 {
+  font-size: 1.5em;
+  line-height: 1.3em;
+  margin-bottom: 20px;
+}
+
+.HomePage p {
+  text-align: justify;
+  margin-bottom: 5px;
+}
+
+.HomePage .spacer {
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 960px) {
+  .HomePage {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .HomePage {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .HomePage {
+    padding: 40px 10px;
+  }
+}
+
+.myCheckBox {
+  display: block;
+  position: relative;
+  padding-right: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 18px;
+}
+.myCheckBox input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.myCheckBox .control__indicator {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  height: 20px;
+  width: 20px;
+  background: #e6e6e6;
+}
+.myCheckBox:hover input ~ .control__indicator {
+  background: #ccc;
+}
+.myCheckBox input:focus ~ .control__indicator {
+  background: #ccc;
+  border: 1px solid #362e2a;
+  -webkit-box-shadow: 0px 0px 11px 7px rgba(255,255,255,0.73);
+  -moz-box-shadow: 0px 0px 11px 7px rgba(255,255,255,0.73);
+  box-shadow: 0px 0px 11px 7px rgba(255,255,255,0.73);
+}
+.myCheckBox input:checked ~ .control__indicator {
+  background: #2aa1c0;
+}
+.myCheckBox:hover input:not([disabled]):checked ~ .control__indicator,
+.myCheckBox input:checked:focus ~ .control__indicator {
+  background: #0e647d;
+}
+.myCheckBox .control__indicator:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+.myCheckBox input:checked ~ .control__indicator:after {
+  display: block;
+}
+.myCheckBox .control__indicator:after {
+  left: 8px;
+  top: 4px;
+  width: 3px;
+  height: 8px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }

@@ -13,10 +13,12 @@
 }
 
 .Input > input {
+  position: relative;
   background-color: transparent;
   border: 0;
   outline: 0;
   width: 100%;
+  z-index: 2;
   border-bottom: 1px solid #ccc;
   padding: 6px 20px 6px 6px;
   font-size: 1rem;
@@ -34,7 +36,7 @@
   left: 0px;
   top: 5px;
   color: rgba(0, 0, 0, 0.54);
-  /* z-index: -1; */
+  z-index: 1;
   -webkit-transform: perspective(100px);
           transform: perspective(100px);
   -webkit-transform-origin: 0 0;
