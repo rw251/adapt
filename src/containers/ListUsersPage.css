@@ -1,4 +1,4 @@
-.HomePage {
+.ListUsersPage {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,13 +6,13 @@
   height: 100%;
 }
 
-.wrapper {
+.ListUsersPage > .wrapper {
   position: relative;
   width: 80%;
   max-width: 800px;
 }
 
-.wrapper > div  {
+.ListUsersPage > .wrapper > div  {
   padding: 40px;
   min-height: 350px;
   color: #fff;

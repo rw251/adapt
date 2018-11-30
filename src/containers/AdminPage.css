@@ -1,0 +1,45 @@
+.AdminPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.AdminPage > .wrapper {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+}
+
+.AdminPage > .wrapper > div  {
+  padding: 40px;
+  min-height: 350px;
+  color: #fff;
+  width: 100%;
+  background-color: rgba(7, 3, 12, 0.85);
+  border-radius: 5px;
+}
+
+.AdminPage .spacer {
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 760px) {
+  .AdminPage > .wrapper {
+    width: 100%;
+  }
+  .AdminPage > .wrapper > div {
+    border-radius: 0;
+  }
+}
+
+@media screen and (max-width: 572px) {
+  .AdminPage {
+    display: block;
+  }
+  .AdminPage > .wrapper > div {
+    padding: 25px 8px;
+    text-align: center;
+  }
+}

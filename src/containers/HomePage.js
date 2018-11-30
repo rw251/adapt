@@ -1,20 +1,9 @@
 import React from 'react';
-
-import auth from '../utils/auth';
+import LogoutButton from '../components/LogoutButton';
 
 import './HomePage.css';
 
 class HomePage extends React.Component {
-  signOut = e => {
-    e.preventDefault();
-    auth.clearAppStorage();
-    this.redirectUser();
-  }
-
-  redirectUser = () => {
-    this.props.history.push('/auth/login'); 
-  };
-
   render() {
     return (
       <div className="HomePage">
@@ -22,8 +11,8 @@ class HomePage extends React.Component {
           <div>
             <p>
               The managment plan
-            </p>
-            <button type="button" className="forms_buttons-forgot" onClick={this.signOut}>Logout</button>
+            </p>            
+            <LogoutButton history={this.props.history} />
           </div>
         </div>
       </div>

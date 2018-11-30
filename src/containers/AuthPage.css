@@ -6,7 +6,6 @@
   left: 0px;
   top: 5px;
   color: rgba(0, 0, 0, 0.54);
-  font-size: 16px;
   z-index: -1;
   -webkit-transform: perspective(100px);
           transform: perspective(100px);
@@ -156,21 +155,6 @@ input[type="submit"] {
 .user_options-forms .forms_buttons-forgot:hover {
   color: #291540;
 }
-.user_options-forms .forms_buttons-action {
-  background-color: #a33643;
-  border-radius: 5px;
-  padding: 10px 35px;
-  font-size: 1rem;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 300;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  transition: background-color 0.2s ease-in-out;
-}
-.user_options-forms .forms_buttons-action:hover {
-  background-color: #7d2933;
-}
 .user_options-forms .user_forms-login {
   position: absolute;
   top: 70px;
@@ -196,7 +180,7 @@ input[type="submit"] {
   .user_options-forms .forms_buttons {
     flex-direction: column;
   }
-  .user_options-forms .user_forms-login .forms_buttons-action {
+  .user_options-forms .user_forms-login .Button {
     margin-top: 30px;
   }
 }
@@ -247,7 +231,7 @@ input[type="submit"] {
     padding: 20px;
     width: 100%;
   }
-  .user .user_options-forms .user_forms-login .forms_buttons-action {
+  .user .user_options-forms .user_forms-login .Button {
     margin-top: 0;
   }
   .user .user_options-forms .user_forms-login .forms_title {
@@ -262,7 +246,7 @@ input[type="submit"] {
     top: 20px;
     left: 20px;
   }
-  .user .user_options-forms .user_forms-login .forms_buttons-action {
+  .user .user_options-forms .user_forms-login .Button {
     margin-top: 0;
     margin-left: 5px;
   }
@@ -272,7 +256,7 @@ input[type="submit"] {
   }
 }
 @media screen and (max-height: 368px) and (max-width: 600px) {
-  .user .user_options-forms .user_forms-login .forms_buttons-action {
+  .user .user_options-forms .user_forms-login .Button {
     padding: 10px 20px;
   }
 }

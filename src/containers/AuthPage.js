@@ -3,19 +3,25 @@ import React from 'react';
 // Utils
 import auth from '../utils/auth';
 
+// Components
+import Button from '../components/Button';
+
+// Style
 import './AuthPage.css';
 
 class AuthPage extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    auth.setToken('aaa');
+
+    const nhsNumber = document.getElementById('nhs_number').value;
+    auth.setToken(nhsNumber);
     auth.setUserInfo('asfd');
     this.redirectUser();
   };
 
   redirectUser = () => {
-    this.props.history.push('/'); 
+    this.props.history.push(+auth.getToken() === 999 ? '/admin' : '/'); 
   };
 
   render() {
@@ -45,7 +51,7 @@ class AuthPage extends React.Component {
                 </fieldset>
                 <div className="forms_buttons">
                   <button type="button" className="forms_buttons-forgot">Forgot password?</button>
-                  <input type="submit" value="Log In" className="forms_buttons-action" />
+                  <Button type="submit" text="Log In" />
                 </div>
               </form>
             </div>
