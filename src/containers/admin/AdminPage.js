@@ -1,6 +1,6 @@
 import React from 'react';
-import LogoutButton from '../components/LogoutButton';
-import ButtonLink from '../components/ButtonLink';
+import LogoutButton from '../../components/LogoutButton';
+import ButtonLink from '../../components/ButtonLink';
 
 import './AdminPage.css';
 

@@ -20,4 +20,15 @@
 
 .RegisterUserPage h2 {
   margin-bottom: 40px;
+  font-size: 28px;
+}
+
+.RegisterUserPage .button-bar {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.RegisterUserPage .button-bar > * {
+   margin-top: 10px;
 }

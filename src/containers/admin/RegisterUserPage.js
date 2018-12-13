@@ -1,10 +1,10 @@
 import React from 'react';
-import Button from '../components/Button';
-import LogoutButton from '../components/LogoutButton';
-import ButtonLink from '../components/ButtonLink';
-import Input from '../components/Input';
+import Button from '../../components/Button';
+import LogoutButton from '../../components/LogoutButton';
+import ButtonLink from '../../components/ButtonLink';
+import Input from '../../components/Input';
 
-import auth from '../utils/auth';
+import auth from '../../utils/auth';
 
 import './RegisterUserPage.css';
 
@@ -40,10 +40,8 @@ class RegisterUserPage extends React.Component {
               <Button type="submit" text="Add Patient" />
             </div>
           </form>
-          <div>
+          <div className="spacer button-bar">
             <ButtonLink to="/admin/users" text="View currently registered patients" />
-          </div>
-          <div className="spacer">
             <LogoutButton history={this.props.history} />
           </div>
         </div>

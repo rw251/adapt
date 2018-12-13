@@ -4,9 +4,9 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 // Components
 import AuthPage from '../containers/AuthPage';
 import HomePage from '../containers/HomePage';
-import AdminPage from '../containers/AdminPage';
-import RegisterUserPage from '../containers/RegisterUserPage';
-import ListUsersPage from '../containers/ListUsersPage';
+import AdminPage from '../containers/admin/AdminPage';
+import RegisterUserPage from '../containers/admin/RegisterUserPage';
+import ListUsersPage from '../containers/admin/ListUsersPage';
 import NotFoundPage from '../containers/NotFoundPage';
 
 // This component ios HoC that prevents the user from accessing a route if he's not logged in

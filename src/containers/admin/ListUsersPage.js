@@ -1,8 +1,8 @@
 import React from 'react';
-import LogoutButton from '../components/LogoutButton';
-import ButtonLink from '../components/ButtonLink';
+import LogoutButton from '../../components/LogoutButton';
+import ButtonLink from '../../components/ButtonLink';
 
-import auth from '../utils/auth';
+import auth from '../../utils/auth';
 
 import './ListUsersPage.css';
 
@@ -51,13 +51,12 @@ class ListUsersPage extends React.Component {
       <div className="ListUsersPage">
         <div className="wrapper">
           <h2>Patient list</h2>
-          <div className="spacer">
-            <ButtonLink to="/admin/users/new" text="Register a new patient" />
-          </div>
+          <p>Patients currently registered to access the application:</p>
           <div className="patientList">
           {this.state.patients.map(patient => <Patient key={patient.nhsNumber} patient={patient} onRemove={this.removePatient} />)}
           </div>
-          <div className="spacer">
+          <div className="spacer button-bar">
+            <ButtonLink to="/admin/users/new" text="Register a new patient" />
             <LogoutButton history={this.props.history} />
           </div>
         </div>
