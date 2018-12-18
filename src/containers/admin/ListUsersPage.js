@@ -1,6 +1,7 @@
 import React from 'react';
 import LogoutButton from '../../components/LogoutButton';
 import ButtonLink from '../../components/ButtonLink';
+import Button from '../../components/Button';
 
 import auth from '../../utils/auth';
 
@@ -17,13 +18,10 @@ class Patient extends React.Component {
         <span>{this.props.patient.name}</span>
         <span>{this.props.patient.nhsNumber}</span>
         <span>
-          <button
-            onClick={(e)=>{
+          <Button type="button" onClick={(e)=>{
               e.preventDefault();
               this.remove(this.props.patient.nhsNumber)
-            }}>
-            delete
-          </button>
+            }} text="Delete" />
         </span>
       </div>
     )
