@@ -5,6 +5,7 @@
 
 .Input input:focus + label, .Input input:valid + label {
   color: #291540;
+  z-index: 3;
   -webkit-transform: translateY(-1em) scale(0.75) perspective(100px) translateZ(-0.001px);
           transform: translateY(-1em) scale(0.75) perspective(100px) translateZ(-0.001px);
 }
