@@ -47,6 +47,21 @@
   margin-top: 15px;
 }
 
+.RegisterUserPage form fieldset {
+  margin-bottom: 15px;
+  border:1px solid #7d2933;
+  padding: 5px;
+}
+
+.RegisterUserPage form fieldset legend {
+  color: #7d2933;
+  margin-left: 16px;
+  margin-bottom: 16px;
+  padding: 0.2em 0.5em;
+  font-size:90%;
+  text-align:right;
+} 
+
 @media screen and (max-width: 760px) {
   .RegisterUserPage > .wrapper {
     width: 100%;

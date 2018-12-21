@@ -42,12 +42,16 @@ class RegisterUserPage extends React.Component {
           <h2>Register a new user</h2>
           <form onSubmit={this.handleSubmit}>
             <fieldset>
+              <legend>Patient details</legend>
               <Input name={propPatientName} type="text" label="Full name" autoFocus />
               <Input name={propNhsNumber} type="number" label="NHS number" required />
             </fieldset>
             <fieldset>
+              <legend>Choose the appropriate sections</legend>
               <CheckBox text="Heart" />
               <CheckBox text="Lungs" />
+              <CheckBox text="Breast Cancer" />
+              <CheckBox text="Thyroid" />
             </fieldset>
             <div>
               <Button type="submit" text="Add Patient" />
