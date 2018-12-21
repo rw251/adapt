@@ -28,6 +28,26 @@
 	color: #FFF;
 }
 
+.NavBar .title.small {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  .NavBar .title.small {
+    display: inline-block;
+  }
+  .NavBar .title.large {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 784px) {
+  .NavBar .title {
+    position: static;
+    display: inline-block;
+  }
+}
+
 .NavBar button {
 	position: absolute;
 	right: 0;

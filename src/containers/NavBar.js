@@ -8,7 +8,8 @@ class NavBar extends React.Component {
     return (
       <nav className="NavBar">
         <div>
-          <span className="title">Individualised plan for lymphoma survivors</span>
+          <span className="title large">Individualised plan for lymphoma survivors</span>
+          <span className="title small">Individualised plan</span>
           <LogoutButton history={this.props.history}/>
         </div>
       </nav>

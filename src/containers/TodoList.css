@@ -121,7 +121,7 @@
 
 .todo-list li label {
 	word-break: break-all;
-	padding: 15px 15px 15px 60px;
+	padding: 15px 80px 15px 60px;
 	display: block;
 	line-height: 1.2;
 	transition: color 0.4s;
@@ -288,4 +288,10 @@ html .clear-completed:active {
 	.filters {
 		bottom: 10px;
 	}
+}
+
+@media screen and (max-width: 784px) {
+	.TodoList {
+		margin-top: 20px;
+	}	
 }
